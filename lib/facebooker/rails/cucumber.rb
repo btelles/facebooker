@@ -2,7 +2,7 @@ require 'facebooker/rails/cucumber/world'
 require 'facebooker/mock/session'
 require 'facebooker/mock/service'
 
-Facebooker::MockService.fixture_path = File.join(RAILS_ROOT, 'features', 'support', 'facebook')
+Facebooker::MockService.fixture_path = File.join(Rails.root, 'features', 'support', 'facebook')
 
 module Facebooker
   class << self

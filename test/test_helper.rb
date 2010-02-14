@@ -20,10 +20,10 @@ require 'mocha'
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
 
 rails_root = File.join(File.dirname(__FILE__),'..','..')
-if defined? RAILS_ROOT
-  RAILS_ROOT.replace(rails_root)
+if defined? Rails.root
+  Rails.root.replace(rails_root)
 else
-  RAILS_ROOT = rails_root
+  Rails.root = rails_root
 end
 
 require 'facebooker'

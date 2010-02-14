@@ -1,6 +1,6 @@
 class ActionController::Base
   def rescues_path_with_facebooker(template_name)
-    t = "#{RAILS_ROOT}/vendor/plugins/facebooker/templates/#{template_name}.erb"
+    t = "#{Rails.root}/vendor/plugins/facebooker/templates/#{template_name}.erb"
     if pretty_facebook_errors? && File.exist?(t)
       t
     else
@@ -17,6 +17,6 @@ class ActionController::Base
   
   def pretty_facebook_errors?
     Facebooker.facebooker_config['pretty_errors'] ||
-      (Facebooker.facebooker_config['pretty_errors'].nil? && RAILS_ENV=="development")
+      (Facebooker.facebooker_config['pretty_errors'].nil? && Rails.env=="development")
   end
 end

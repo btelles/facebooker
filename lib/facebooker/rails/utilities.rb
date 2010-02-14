@@ -3,7 +3,7 @@ module Facebooker
     class Utilities
       class << self
         def refresh_all_images(session)
-          Dir.glob(File.join(RAILS_ROOT,"public","images","*.{png,jpg,gif}")).each do |img|
+          Dir.glob(File.join(Rails.root,"public","images","*.{png,jpg,gif}")).each do |img|
             refresh_image(session,img)
           end
         end

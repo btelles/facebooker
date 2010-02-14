@@ -1,6 +1,6 @@
 # Added support to the Facebooker.yml file for switching to the new profile design..
 # Config parsing needs to happen before files are required.
-facebook_config = "#{RAILS_ROOT}/config/facebooker.yml"
+facebook_config = "#{Rails.root}/config/facebooker.yml"
 
 require 'facebooker'
 FACEBOOKER = Facebooker.load_configuration(facebook_config)
